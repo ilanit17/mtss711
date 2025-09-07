@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>מתכנן התערבויות MTSS</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+<script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://aistudiocdn.com/react-dom@19.1.1/",
+    "react/": "https://aistudiocdn.com/react@19.1.1/",
+    "react": "https://aistudiocdn.com/react@19.1.1",
+    "recharts": "https://aistudiocdn.com/recharts@2.12.7",
+    "xlsx": "https://cdn.sheetjs.com/xlsx-latest/package/dist/xlsx.full.min.js",
+    "lucide-react": "https://aistudiocdn.com/lucide-react@0.542.0",
+    "@google/genai": "https://jspm.dev/@google/genai@0.14.2"
+  }
+}
+</script>
+<style>
+    @media print {
+        body.printing > *:not(.printable) {
+            display: none !important;
+        }
+        html, body {
+            margin: 0 !important;
+            padding: 0 !important;
+        }
+        .printable {
+            margin: 0;
+            padding: 20px;
+            box-shadow: none !important;
+            border: none !important;
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            max-width: 100%;
+            overflow: visible !important;
+        }
+        .no-print {
+            display: none !important;
+        }
+
+        /* Specific fixes for the data mapping table */
+        .data-mapping-table-container {
+            overflow: visible !important;
+            border: none !important;
+            box-shadow: none !important;
+            -webkit-print-color-adjust: exact;
+            print-color-adjust: exact;
+        }
+        .data-mapping-table-container table {
+            table-layout: auto !important;
+            width: 100% !important;
+            border-collapse: collapse !important;
+        }
+        .data-mapping-table-container thead,
+        .data-mapping-table-container th,
+        .data-mapping-table-container td {
+            position: static !important;
+        }
+        .data-mapping-table-container th[style*="writing-mode"] {
+            writing-mode: horizontal-tb !important;
+            transform: none !important;
+            height: auto !important;
+            text-align: right !important;
+            padding: 4px !important;
+            white-space: nowrap;
+        }
+        .data-mapping-table-container input,
+        .data-mapping-table-container select,
+        .data-mapping-table-container textarea {
+            border: none !important;
+            background-color: transparent !important;
+            box-shadow: none !important;
+            padding: 0 !important;
+            width: auto !important;
+            -webkit-print-color-adjust: exact;
+            print-color-adjust: exact;
+        }
+        .data-mapping-table-container button {
+            display: none !important;
+        }
+    }
+</style>
+</head>
+<body>
+    <div id="root"></div>
+    <script type="module" src="index.tsx"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</body>
+</html>
